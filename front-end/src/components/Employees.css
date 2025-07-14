@@ -1,6 +1,7 @@
 h1 {
   font-weight: 500;
   font-size: 1.25rem;
+  margin: 25px 0;
 }
 
 .filters {
@@ -31,6 +32,10 @@ input {
 
 @media screen and (max-width: 600px) {
 
+  h1 {
+    margin: 7px 0 20px 0;
+  }
+
   .filters {
     display: flex;
     align-items:start;
@@ -44,11 +49,12 @@ input {
   }
 
   .icoSearch {
-    right: 20px;
+    right: 7px;
   }
 
   input {
-    padding: 12px 30px 12px 16px;
+    padding: 12px 35px 12px 16px;
+    width: calc(100% - 50px);
   }
 
 }

@@ -1,4 +1,5 @@
 import './Table.css'
+import arrow from '../assets/arrow.svg'
 
 function Table({options}) {
 
@@ -26,12 +27,13 @@ function Table({options}) {
     <>
       <div className='table'>
 
-        <ul className='thead tbody'>
+        <ul className='thead'>
           <li>FOTO</li>
           <li>NOME</li>
           <li>CARGO</li>
           <li>DATA DE ADMISSÃO</li>
           <li>TELEFONE</li>
+          <li className='mobile'>●</li>
         </ul>
         
         {options.map((opt) => (
@@ -41,6 +43,9 @@ function Table({options}) {
             <li>{opt.job}</li>
             <li>{formatDateToDDMMYYYY(opt.admission_date)}</li>
             <li>{formatPhone(opt.phone)}</li>
+            <li className='mobile'>
+              <img src={arrow} className="icoArrow" alt="Mais informações" />
+            </li>
           </ul>
         ))}
         
