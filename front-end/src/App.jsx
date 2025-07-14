@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import betallent from './assets/betallent.svg'
 import './App.css'
+import Header from './components/Header'
 
 function App() {
   const [employees, setEmployees] = useState([])
@@ -19,11 +19,14 @@ function App() {
 
   return (
     <>
-      <div>
+      <Header></Header>
 
-        <img src={betallent} className="logo react" alt="BeTallent logo" />
+      <div className='content'>
+        {employees.map((employee) => (
+          <p key={employee.id}>{employee.name}</p>
+        ))}
       </div>
-      <h2>Teste</h2>
+      
 
     </>
   )

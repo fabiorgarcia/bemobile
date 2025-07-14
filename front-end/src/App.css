@@ -1,10 +1,7 @@
 body {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
+  margin: 0;
+  padding: 0;
   background-color: #F0F0F0;
-
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -12,14 +9,12 @@ body {
     "wdth" 100;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.content {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
 }
-
-
 
 h2 {
   font-weight: 400;
