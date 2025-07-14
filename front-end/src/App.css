@@ -1,7 +1,15 @@
+* {
+  -webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: #F0F0F0;
+  color: #1C1C1C;
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -10,12 +18,8 @@ body {
 }
 
 .content {
-  width: 100%;
+  width: calc(100% - 40px);
   max-width: 1024px;
   margin: 0 auto;
   padding: 20px;
-}
-
-h2 {
-  font-weight: 400;
 }

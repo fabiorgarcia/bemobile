@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Header from './components/Header'
+import Employees from './components/Employees'
 
 function App() {
   const [employees, setEmployees] = useState([])
@@ -19,7 +20,8 @@ function App() {
 
   return (
     <>
-      <Header></Header>
+      <Header />
+      <Employees />
 
       <div className='content'>
         {employees.map((employee) => (
