@@ -5,7 +5,33 @@ import Table from '../components/organisms/Table'
 
 function Home() {
 
-  const [employees, setEmployees] = useState([])
+  const [employees, setEmployees] = useState([]);
+  const [employeesFilter, setEmployeesFilter] = useState([]);
+
+  const [filterText, setfilterText] = useState('');
+
+  function filterList(e) {
+    setfilterText(e);
+    let newArray = [];
+
+    for (let i = 0; i < employees.length; i++) {
+      if (employees[i].name == e || employees[i].job == e || employees[i].phone == e) {
+        newArray.push(employees[i]);
+      }
+    }
+
+    if (newArray.length > 0) {
+      setEmployeesFilter(newArray);
+    } else {
+      setEmployeesFilter(employees);
+    }
+    
+  }
+  
+
+
+
+
 
   useEffect(() => {
     fetch('http://localhost:5000/employees', {
@@ -17,6 +43,7 @@ function Home() {
       .then((resp) => resp.json())
       .then((data) => {
         setEmployees(data)
+        setEmployeesFilter(data)
       })
       .catch((err) => consolo.log(err))
   },[])
@@ -30,11 +57,11 @@ function Home() {
           <h1>Funcionários</h1>
           <div className='searchDiv'>
             <Search />
-            <input type='text' placeholder='Pesquisar'></input>
+            <input type='text' placeholder='Pesquisar' value={filterText} onChange={(ev) => filterList(ev.target.value)}></input>
           </div>
         </div>
 
-        <Table options={employees} />
+        <Table options={employeesFilter} />
         
       </div>
     </>
