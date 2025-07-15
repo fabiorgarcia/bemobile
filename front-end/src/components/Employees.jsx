@@ -7,7 +7,7 @@ function Employees() {
 
   const [employees, setEmployees] = useState([])
 
-  fetch('http://localhost:3000/employees', {
+  fetch('http://localhost:5000/employees', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
