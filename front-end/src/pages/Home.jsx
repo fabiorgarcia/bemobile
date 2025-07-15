@@ -15,12 +15,12 @@ function Home() {
     let newArray = [];
 
     for (let i = 0; i < employees.length; i++) {
-      if (employees[i].name == e || employees[i].job == e || employees[i].phone == e) {
+      if (employees[i].name.toLowerCase().startsWith(e.toLowerCase()) || employees[i].job.toLowerCase().startsWith(e.toLowerCase()) || employees[i].phone.toLowerCase().startsWith(e.toLowerCase())) {
         newArray.push(employees[i]);
       }
     }
 
-    if (newArray.length > 0) {
+    if (e) {
       setEmployeesFilter(newArray);
     } else {
       setEmployeesFilter(employees);
