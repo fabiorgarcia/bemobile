@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import './Employees.css'
-import search from '../assets/search.svg'
-import Table from './Table'
+import './Home.css'
+import Search from '../components/atoms/Search'
+import Table from '../components/organisms/Table'
 
-function Employees() {
+function Home() {
 
   const [employees, setEmployees] = useState([])
 
@@ -25,7 +25,7 @@ function Employees() {
         <div className='filters'>
           <h1>Funcionários</h1>
           <div className='searchDiv'>
-            <img src={search} className="icoSearch" alt="Filtrar" />
+            <Search />
             <input type='text' placeholder='Pesquisar'></input>
           </div>
         </div>
@@ -37,4 +37,4 @@ function Employees() {
   )
 }
 
-export default Employees
+export default Home

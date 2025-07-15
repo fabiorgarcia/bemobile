@@ -1,5 +1,5 @@
 import './Table.css'
-import arrow from '../assets/arrow.svg'
+import Arrow from '../atoms/Arrow';
 
 function Table({options}) {
 
@@ -44,7 +44,7 @@ function Table({options}) {
             <li>{formatDateToDDMMYYYY(opt.admission_date)}</li>
             <li>{formatPhone(opt.phone)}</li>
             <li className='mobile'>
-              <img src={arrow} className="icoArrow" alt="Mais informações" />
+              <Arrow />
             </li>
           </ul>
         ))}

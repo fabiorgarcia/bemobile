@@ -1,4 +1,4 @@
-import betallent from '../assets/betallent.svg'
+import Logo from '../atoms/Logo'
 import './Header.css'
 
 function Header() {
@@ -7,7 +7,7 @@ function Header() {
     <>
       <header>
         <div className='content'>
-            <img src={betallent} className="logo" alt="BeTallent logo" />
+            <Logo />
         </div>
       </header>
     </>
