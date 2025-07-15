@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Home.css'
 import Search from '../components/atoms/Search'
 import Table from '../components/organisms/Table'
@@ -7,17 +7,21 @@ function Home() {
 
   const [employees, setEmployees] = useState([])
 
-  fetch('http://localhost:5000/employees', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-  .then((resp) => resp.json())
-  .then((data) => {
-    setEmployees(data)
-  })
-  .catch((err) => consolo.log(err))
+  useEffect(() => {
+    fetch('http://localhost:5000/employees', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      .then((resp) => resp.json())
+      .then((data) => {
+        setEmployees(data)
+      })
+      .catch((err) => consolo.log(err))
+  },[])
+
+  
 
   return (
     <>

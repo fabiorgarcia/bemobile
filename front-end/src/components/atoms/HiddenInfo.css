@@ -1,0 +1,30 @@
+.showInfo {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+}
+
+.infos {
+  margin: 0;
+  width: calc(100% - 40px);
+  padding: 11px 20px;
+  list-style-type: none;
+  align-items: center;
+  display: inline-block;
+}
+
+.infos span {
+    font-weight: 500;
+}
+
+.infos div {
+  border-bottom: 1px solid #f1f1f1;
+  display: flex;
+  padding: 8px 0 1px 0;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+  
+}

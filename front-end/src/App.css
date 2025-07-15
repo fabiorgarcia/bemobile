@@ -23,3 +23,15 @@ body {
   margin: 0 auto;
   padding: 20px;
 }
+
+.mobile {
+  display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .desktop {
+    display: none;
+  }
+}
