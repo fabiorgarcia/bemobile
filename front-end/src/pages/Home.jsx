@@ -7,7 +7,6 @@ function Home() {
 
   const [employees, setEmployees] = useState([]);
   const [employeesFilter, setEmployeesFilter] = useState([]);
-
   const [filterText, setfilterText] = useState('');
 
   function filterList(e) {
@@ -27,10 +26,6 @@ function Home() {
     }
     
   }
-  
-
-
-
 
 
   useEffect(() => {

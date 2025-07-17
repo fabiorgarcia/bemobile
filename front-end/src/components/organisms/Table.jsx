@@ -9,13 +9,12 @@ function Table({options}) {
   const [toggleShow, setToggleShow] = useState(true);
   const [count, setCount] = useState(0);
 
-  const incrementCount = (x) => {
+  const moreInfo = (x) => {
     if (showResults == x) {
       setShowResults(0);  
     } else {
       setShowResults(x);
     }
-    
   };
  
   function formatDateToDDMMYYYY(dateString) {
@@ -68,8 +67,8 @@ function Table({options}) {
                 <li>{formatPhone(opt.phone)}</li>
               </ul>
             </li>
-            <li className='mobile cursor' onClick={() => incrementCount(opt.id)}>
-              <img src={arrow} className={showResults != opt.id ? 'icoArrow' : "icoArrowOpem"} alt="Mais informações" />
+            <li className='mobile cursor' onClick={() => moreInfo(opt.id)}>
+              <img src={arrow} id={'ico'+opt.id} className={showResults != opt.id ? 'icoArrow' : "icoArrowOpem"} alt="Mais informações" />
             </li>
             {showResults == opt.id && <HiddenInfo infos={opt} />}
           </ul>
