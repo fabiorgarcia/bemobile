@@ -1,7 +1,12 @@
 #TESTE FÁBIO GARCIA
 
-Instruções para inicializar o projeto:
+Instruções para inicializar o projeto por pronpt de comando:
 
-- Back-end: entre no terminal na pasta /back-end e digite: npx json-server --watch db.json --port 5000
+- Clonar o Projeto:
+  git clone https://github.com/fabiorgarcia/bemobile.git
 
-- Fron-end, entre no terminal na pasta /front-end e digite: npm run dev
+- Back-end: entre no terminal na pasta /back-end e digitar: 
+  npx json-server --watch db.json --port 5000
+
+- Fron-end, entre no terminal na pasta /front-end e digitar: 
+  npm run dev
