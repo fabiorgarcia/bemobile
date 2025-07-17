@@ -4,7 +4,7 @@ Instruções para inicializar o projeto por pronpt de comando:
 
 1. Clonar o Projeto: git clone https://github.com/fabiorgarcia/bemobile.git
 2. Front-End:
-  - Entre na pasta bemobile: cd bemobile
+-- Entre na pasta bemobile: cd bemobile
   - Entrar na pasta front-end: cd front-end
   - Instalar pacotes digitando o comando:  npm i
   - Digitar o comando par inicializar o Front-end: npm run dev
